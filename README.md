@@ -1,156 +1,110 @@
-
 # 🗡️ Raji — Game Assistant
 
-An offline-first, zero-API-key Retrieval-Augmented Generation (RAG)-style game assistant built using **Python**, **Streamlit**, and **Scikit-learn** for the action-adventure video game *Raji: An Ancient Epic*, developed by Nodding Heads Games.
+<p align="center">
+  A lightweight, offline-first game knowledge assistant for
+  <b>Raji: An Ancient Epic</b>.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Framework-Streamlit-FF4B4B?logo=streamlit" />
+  <img src="https://img.shields.io/badge/NLP-TF--IDF-orange" />
+  <img src="https://img.shields.io/badge/Approach-Retrieval--Based-success" />
+  <img src="https://img.shields.io/badge/API%20Key-Not%20Required-brightgreen" />
+</p>
 
 ---
 
-## 1. Project Overview
+## 📌 Overview
 
-Raji — Game Assistant is an interactive web-based chatbot designed to help players access information about the game *Raji: An Ancient Epic*.
+**Raji — Game Assistant** is an interactive chatbot designed to help players explore the world, characters, weapons, powers, puzzles, and gameplay of *Raji: An Ancient Epic*.
 
-The application uses Natural Language Processing (NLP) and information retrieval techniques to find relevant answers from a predefined knowledge base. It uses TF-IDF vectorization and cosine similarity to identify the most relevant information.
+Built using Python and Streamlit, the application uses Natural Language Processing (NLP) and information retrieval techniques to find relevant answers from a predefined knowledge base.
 
-Unlike conventional AI assistants that depend on external Large Language Model (LLM) APIs, this application uses a lightweight, locally executable retrieval system without requiring paid API keys.
+Instead of relying on paid Large Language Model (LLM) APIs, it uses **TF-IDF vectorization and cosine similarity** to retrieve relevant information locally.
 
----
+## ✨ Features
 
-## 2. Problem Statement
+| Feature | Description |
+|---|---|
+| 💬 Interactive Chatbot | Ask questions about Raji: An Ancient Epic |
+| 🔎 Smart Retrieval | TF-IDF and cosine similarity-based search |
+| 📚 Knowledge Management | Upload TXT, PDF, and DOCX documents |
+| 🔐 Role-Based Access | Guest and administrator access |
+| 🌐 Multilingual Support | English and Hindi fallback functionality |
+| 🎨 Theme Customization | Dark and light themes |
+| 📊 Analytics | Track queries and usage information |
+| 🎤 Voice Features | Optional speech functionality |
+| 🎫 Support System | Submit player support tickets |
 
-Many AI-powered gaming assistants depend on cloud-based LLM APIs and external translation services. These dependencies can introduce:
-
-- API usage costs.
-- Internet connectivity requirements.
-- Response delays.
-- API rate-limit errors.
-- Privacy and data-sharing concerns.
-
-Raji — Game Assistant addresses these challenges through a lightweight retrieval-based approach that can run locally.
-
----
-
-## 3. Project Objectives
-
-The main objectives are:
-
-1. Develop an interactive chatbot dedicated to Raji: An Ancient Epic.
-2. Implement a locally executable information retrieval system.
-3. Use TF-IDF and cosine similarity to retrieve relevant answers.
-4. Provide role-based access for guests and administrators.
-5. Allow administrators to upload and manage knowledge documents.
-6. Provide multilingual support with offline fallback mechanisms.
-7. Develop an accessible interface with dark and light themes.
-8. Maintain local chat records, analytics, and support tickets.
-
----
-
-## 4. Technology Stack
+## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| Python | Main programming language |
-| Streamlit | Web application framework |
-| Scikit-learn | TF-IDF vectorization and similarity calculation |
-| TF-IDF | Text representation |
-| Cosine Similarity | Ranking relevant knowledge chunks |
+| Python | Core programming language |
+| Streamlit | Web application interface |
+| Scikit-learn | Machine learning and retrieval |
+| TF-IDF | Text vectorization |
+| Cosine Similarity | Document relevance scoring |
 | PyPDF | PDF text extraction |
-| Python-docx | DOCX text extraction |
-| JSON | Local data persistence |
-| Pickle | Serialization of retrieval index |
-| HTML and CSS | Interface customization |
+| Python-docx | DOCX processing |
+| JSON | Local data storage |
+| Pickle | Retrieval index serialization |
+| HTML & CSS | UI customization |
 
-Optional voice features may use SpeechRecognition and gTTS.
+## 🧠 How It Works
 
----
+The application follows a retrieval-based question-answering workflow.
 
-## 5. Key Features
+1. User enters a question.
+2. The system preprocesses the query.
+3. TF-IDF converts the query into a numerical representation.
+4. Cosine similarity compares it with stored knowledge chunks.
+5. The most relevant chunk is selected.
+6. A similarity threshold determines whether the result is reliable.
+7. The application displays the answer or a fallback response.
 
-### 5.1 Interactive Chatbot
+### System Architecture
 
-- Answers questions related to Raji: An Ancient Epic.
-- Provides information about characters, weapons, powers, and gameplay.
-- Retrieves relevant information from the knowledge base.
-- Uses a fallback response when no suitable match is found.
+```text
+             USER
+               |
+               v
+       STREAMLIT INTERFACE
+               |
+               v
+       QUERY PROCESSING
+               |
+               v
+        TF-IDF VECTORIZER
+               |
+               v
+       COSINE SIMILARITY
+               |
+               v
+       KNOWLEDGE RETRIEVAL
+               |
+          +----+----+
+          |         |
+       Relevant   No Match
+          |         |
+          v         v
+       ANSWER    FALLBACK
+          |         |
+          +----+----+
+               |
+               v
+          USER RESPONSE
+```
 
-### 5.2 Retrieval-Based Question Answering
-
-- Divides knowledge documents into smaller text chunks.
-- Converts text into TF-IDF vectors.
-- Compares user queries with stored knowledge.
-- Uses cosine similarity to rank matching chunks.
-- Applies a similarity threshold to avoid irrelevant answers.
-
-### 5.3 Knowledge Base Management
-
-- Admin-only document upload functionality.
-- Supports TXT, PDF, and DOCX documents.
-- Extracts text from uploaded documents.
-- Updates the retrieval index when new documents are added.
-
-### 5.4 Role-Based Authentication
-
-- Guest or customer access for regular players.
-- Administrator access for managing documents and viewing analytics.
-- Session-based authentication.
-
-### 5.5 Semantic Search
-
-- Displays the most relevant knowledge chunks.
-- Shows cosine similarity scores.
-- Helps inspect and understand retrieval results.
-
-### 5.6 Multilingual Support
-
-- English and Hindi offline fallback mechanisms.
-- Language-related functionality for supported languages.
-- Local translation mappings for selected responses.
-
-### 5.7 Dark and Light Themes
-
-- Single-click theme switching.
-- Customized interface elements.
-- Improved readability and accessibility.
-
-### 5.8 Analytics and Support
-
-- Tracks user queries.
-- Records unanswered questions.
-- Displays usage information.
-- Allows players to submit support tickets.
-
----
-
-## 6. System Architecture
-
-The application is divided into five main layers:
-
-1. **Presentation Layer:** Streamlit pages and user interface.
-2. **Authentication Layer:** Guest and administrator access management.
-3. **Retrieval Layer:** Document processing, TF-IDF indexing, and cosine similarity.
-4. **Persistence Layer:** Local JSON records and serialized retrieval index.
-5. **Knowledge Layer:** Seed game knowledge and administrator-uploaded documents.
-
-### Question Answering Workflow
-
-1. The user enters a question.
-2. The application processes the query.
-3. The retrieval engine searches the knowledge base.
-4. TF-IDF represents the query and knowledge chunks numerically.
-5. Cosine similarity calculates the matching scores.
-6. The system identifies the best matching chunk.
-7. The similarity threshold determines whether the result is suitable.
-8. The application displays the retrieved answer or a fallback message.
-
----
-
-## 7. Project Structure
+## 📂 Project Structure
 
 ```text
 raji-game-assistant/
 │
 ├── Home.py
-├── requirements.txt
 ├── README.md
+├── requirements.txt
 ├── .gitignore
 │
 ├── assets/
@@ -166,7 +120,6 @@ raji-game-assistant/
 │
 ├── data/
 │   ├── knowledge_base/
-│   │   └── raji_game_lore.txt
 │   ├── uploads/
 │   └── store/
 │
@@ -178,140 +131,116 @@ raji-game-assistant/
     └── 5_Contact_Support.py
 ```
 
----
-
-## 8. Installation and Setup
+## ⚙️ Installation and Setup
 
 ### Prerequisites
 
-- Python installed on your computer.
-- Visual Studio Code or another Python editor.
-- Required project files.
+- Python 3.10 or later
+- Git
+- VS Code (recommended)
 
-### Step 1: Download the Project
+### 1. Clone the repository
 
-Download or clone the project repository and open its folder in VS Code.
+```bash
+git clone https://github.com/sanchi-preet-kaur/raji-game-assistant.git
+```
 
-### Step 2: Create a Virtual Environment
+### 2. Navigate to the project directory
+
+```bash
+cd raji-game-assistant
+```
+
+### 3. Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-### Step 3: Activate the Virtual Environment
+### 4. Activate the environment
 
-For Windows:
+**Windows:**
 
 ```bash
 venv\Scripts\activate
 ```
 
-### Step 4: Install Dependencies
+### 5. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 5: Run the Application
+### 6. Run the application
 
 ```bash
 streamlit run Home.py
 ```
 
-### Step 6: Open the Application
-
-Open the local address displayed in your terminal. The default address is:
+### 7. Open in browser
 
 ```text
 http://localhost:8501
 ```
 
----
+## 📸 Application Screenshots
 
-## 9. Core Modules
+Add screenshots of your actual application here.
 
-| Module | Description |
+| Home Page | Chat Interface |
 |---|---|
-| `auth.py` | Handles authentication and user roles |
-| `rag.py` | Handles document processing, indexing, and retrieval |
-| `storage.py` | Manages local JSON data |
-| `translate.py` | Handles language routing and translation fallbacks |
-| `theme.py` | Provides dark and light themes |
-| `sidebar.py` | Manages navigation and sidebar controls |
-| `voice.py` | Handles optional voice functionality |
+| Add home screenshot | Add chat screenshot |
 
----
-
-## 10. Functional Pages
-
-| Page | Functionality |
+| Semantic Search | Analytics |
 |---|---|
-| Home | Project introduction and navigation |
-| Chat | Interactive game assistant |
-| Knowledge Base | Document upload and index management |
-| Semantic Search | Displays matching knowledge chunks |
-| Analytics | Displays usage and query information |
-| Contact Support | Accepts player support requests |
+| Add search screenshot | Add analytics screenshot |
+
+## 🎯 Project Objectives
+
+- Build a dedicated gaming knowledge assistant.
+- Implement locally executable information retrieval.
+- Apply NLP techniques to game-related questions.
+- Support administrator-managed knowledge documents.
+- Provide multilingual fallback functionality.
+- Develop a modular and accessible web interface.
+
+## ⚠️ Limitations
+
+- Answer quality depends on the available knowledge base.
+- TF-IDF may not understand complex semantic relationships.
+- The system does not currently generate answers using an LLM.
+- Some optional voice and translation features may require internet access.
+- Retrieval accuracy depends on the similarity threshold.
+
+## 🚀 Future Enhancements
+
+- Integration with local LLMs using Ollama.
+- Dense vector embeddings.
+- Hybrid sparse and dense retrieval.
+- Hinglish query normalization.
+- Expanded Hindi knowledge base.
+- Improved multilingual question answering.
+- Advanced retrieval evaluation and analytics.
+
+## 👩‍💻 Developer
+
+**Sanchi Preet Kaur**
+
+- Degree: B.Tech
+- Department: Computer Science and Engineering (Data Science)
+- Institution: Haldia Institute of Technology
+- Academic Year: 2025–2026
+
+## 📄 License
+
+Developed for educational, academic, and portfolio purposes.
 
 ---
 
-## 11. Advantages
+<p align="center">
+  <b>Built with ❤️ using Python and Streamlit</b>
+</p>
 
-- No paid LLM API key required.
-- Lightweight retrieval architecture.
-- Locally executable core functionality.
-- Game-specific knowledge retrieval.
-- Easy knowledge base expansion.
-- Role-based access control.
-- Modular and maintainable project structure.
-- Reduced dependence on external cloud services.
-
----
-
-## 12. Limitations
-
-- Answer quality depends on the knowledge base.
-- TF-IDF may not understand complex paraphrased questions.
-- The system does not currently demonstrate LLM-based answer generation.
-- Translation and optional voice features may have limitations depending on their implementation and network availability.
-- Retrieval accuracy depends on the selected similarity threshold.
-
----
-
-## 13. Future Enhancements
-
-1. Integrate local LLMs using Ollama.
-2. Implement dense vector embeddings.
-3. Develop hybrid sparse and dense retrieval.
-4. Add Hinglish query normalization.
-5. Expand the Hindi knowledge base.
-6. Improve multilingual question answering.
-7. Enhance analytics and retrieval evaluation.
-
----
-
-## 14. Conclusion
-
-Raji — Game Assistant demonstrates how Natural Language Processing and information retrieval techniques can be used to develop a dedicated gaming assistant.
-
-By combining Python, Streamlit, TF-IDF, and cosine similarity, the application provides a lightweight and locally executable approach to game-related question answering.
-
-The modular architecture also provides opportunities for future improvements, including embedding-based retrieval and local Large Language Model integration.
-
----
-
-## 15. Developer Information
-
-**Developed by:** Sanchi Preet Kaur  
-**Degree:** B.Tech  
-**Department:** Computer Science and Engineering (Data Science)  
-**Institution:** Haldia Institute of Technology  
-**Academic Year:** 2025–2026
-
----
-
-## 16. License
-
-This project is developed for educational and portfolio purposes.
-#   r a j i - g a m e - a s s i s t a n t  
- 
+<p align="center">
+  If you find this project interesting, consider giving it a ⭐ on GitHub!
+</p>
