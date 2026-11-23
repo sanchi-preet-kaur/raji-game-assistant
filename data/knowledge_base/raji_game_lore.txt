@@ -1,0 +1,29 @@
+Q: What is Raji: An Ancient Epic?
+A: Raji: An Ancient Epic is an action-adventure video game set in ancient India, developed by Nodding Heads Games (based in Pune, India) and released in 2020. Players control Raji, a young girl chosen by the gods to rescue her younger brother Golu and stand against a demonic invasion led by Mahabalasura.
+
+Q: Who is the main protagonist and what is her goal?
+A: The protagonist is Raji, a skilled circus performer and acrobat. When demons attack and kidnap children—including her younger brother Golu—the Hindu deities Durga and Vishnu grant her divine weapons and powers to save Golu and halt the demon lord Mahabalasura.
+
+Q: Who is the main antagonist in Raji: An Ancient Epic?
+A: The main antagonist is Mahabalasura, the powerful demon lord who breaks the thousand-year-old peace treaty between gods and demons, invading the human realm and abducting children to weaken humanity's spiritual resolve.
+
+Q: What weapons does Raji use in the game?
+A: Raji wields four divine weapons gifted by the gods: 1) The Trishul (trident) gifted by Goddess Durga, 2) The Sharanga Bow gifted by Lord Vishnu, 3) The Sudarshana Chakra (discus) with blade and mace modes, and 4) The Gadha / Vajra elemental powerups.
+
+Q: What are the elemental powers or favor trees in Raji?
+A: Raji can channel three elemental divine powers into her weapons using Favor orbs found in shrines: Lightning (Indra), Fire (Agni), and Ice (Shiva). Each element unlocks unique area-of-effect and combo abilities.
+
+Q: How is the story narrated and presented?
+A: The narrative is presented through traditional Pahari miniature paintings and hand-painted shadow puppetry (Tholu Bommalata), accompanied by voice-overs from Lord Vishnu and Goddess Durga observing Raji's journey.
+
+Q: What architectural styles and locations appear in the game?
+A: The environments are heavily inspired by medieval Rajasthani architecture, fortresses, stepwells (baoris), the Land of Mystics, Hiranyagarbha, and traditional Indian temples rendered with Unreal Engine 4.
+
+Q: What platforms is Raji: An Ancient Epic available on?
+A: Raji: An Ancient Epic is available on PC (Steam, Epic Games Store, GOG), Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, and mobile via Netflix Games (iOS and Android).
+
+Q: What is the Enhanced Edition of Raji?
+A: Released in 2022 as a free update, the Enhanced Edition added Hindi voice-overs, new game modes (including Story Mode and One-Shot Mode), improved combat responsiveness, and visual refinements.
+
+Q: How do you solve the mandala puzzles in Raji?
+A: Mandala puzzles require rotating concentric circular rings so that the sacred geometric lines and lotus patterns align completely. Aligning the outer rings first usually makes locking the inner rings easier.
