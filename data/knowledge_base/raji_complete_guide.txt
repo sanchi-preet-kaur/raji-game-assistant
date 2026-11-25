@@ -1,0 +1,26 @@
+Raji: An Ancient Epic — Complete Game Guide & Lore
+
+Story & Characters:
+Raji: An Ancient Epic is an action-adventure game set in ancient India, developed by Nodding Heads Games. After demons invade the human realm, a young circus performer named Raji is chosen by the gods Durga and Vishnu to rescue her younger brother Golu and stop the demon lord Mahabalasura. The story is narrated by the gods Durga and Vishnu as they watch Raji's journey across forts, palaces, and mystical landscapes inspired by Rajasthani architecture and Pahari paintings.
+
+Divine Weapons:
+1. Trishul (Trident): Gifted by Goddess Durga. Balanced melee weapon ideal for crowd control, sweeping combos, and close-to-mid range combat.
+2. Sharanga Bow: Gifted by Lord Vishnu. Fast ranged weapon great for flying enemies, distant archers, and interrupting demon casters.
+3. Sword and Shield (Khanda & Shield): Gifted by Lord Vishnu. Defensive and counter-attack weapon allowing Raji to block heavy strikes and stun enemies.
+4. Chakra (Sudarshana Chakra): Discus weapon capable of hitting multiple enemies in curved paths and returning to Raji.
+
+Elemental Powers (Divine Favors):
+Players collect Divine Favor orbs to upgrade weapons with three elemental powers:
+- Lightning (Indra): Fast chain damage that shocks nearby enemies.
+- Fire (Agni): High burn damage over time and strong single-target impact.
+- Ice (Varuna / Frost): Slows and freezes enemies, giving breathing room during large waves.
+
+Gameplay, Combat & Puzzles:
+- Acrobatic Combat: Raji uses wall-runs, pole spins, and vaults to perform aerial attacks and dodge demon strikes.
+- Mandala Puzzles: Ancient circular stone puzzles requiring players to rotate rings to align sacred artwork and unlock sealed doors.
+- Boss Battles: Includes major encounters such as the Chieftain, Naga, and Mahabalasura, where reading attack patterns and switching weapons/elements is key.
+
+PC Troubleshooting & Support:
+- Low FPS or Stuttering: Lower shadow quality, disable V-Sync, or switch between DirectX 11 and DirectX 12 in graphics settings.
+- Game Crashes on Launch: Verify game files on Steam or Epic Games Launcher and update GPU drivers (NVIDIA/AMD).
+- Controller Not Detected: Enable Steam Input in controller settings or reconnect the controller before launching the game.

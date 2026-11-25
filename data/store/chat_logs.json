@@ -98,5 +98,125 @@
     "response_time": 0.002,
     "language": "English",
     "feedback": null
+  },
+  {
+    "id": "chat_11_1795596014",
+    "timestamp": "2026-11-25T14:10:14.853957",
+    "question": "hii",
+    "answer": "I couldn't find reliable information about that in the **Raji: An Ancient Epic** knowledge base. Please check your phrasing or reach out via **Contact Support** in the sidebar!",
+    "score": 0.0,
+    "response_time": 0.3237,
+    "language": "English",
+    "feedback": null
+  },
+  {
+    "id": "chat_12_1795596025",
+    "timestamp": "2026-11-25T14:10:25.622882",
+    "question": "who is raji ",
+    "answer": "I couldn't find reliable information about that in the **Raji: An Ancient Epic** knowledge base. Please check your phrasing or reach out via **Contact Support** in the sidebar!",
+    "score": 0.1406,
+    "response_time": 0.2178,
+    "language": "English",
+    "feedback": null
+  },
+  {
+    "id": "chat_13_1795596304",
+    "timestamp": "2026-11-25T14:15:04.639367",
+    "question": "who is Raji",
+    "answer": "I couldn't connect to the AI model right now and didn't find an exact match in the offline knowledge base. Check your `GROQ_API_KEY` in `.env` or visit **Contact Support**.",
+    "score": 0.1406,
+    "response_time": 0.9107,
+    "language": "English",
+    "feedback": null
+  },
+  {
+    "id": "chat_14_1795596564",
+    "timestamp": "2026-11-25T14:19:24.864449",
+    "question": "who is Raji",
+    "answer": "I couldn't connect to the AI model right now and didn't find an exact match in the offline knowledge base. Check your `GROQ_API_KEY` in `.env` or visit **Contact Support**.",
+    "score": 0.1406,
+    "response_time": 0.9533,
+    "language": "English",
+    "feedback": null
+  },
+  {
+    "id": "chat_15_1795596724",
+    "timestamp": "2026-11-25T14:22:04.594139",
+    "question": "who is Raji",
+    "answer": "Q: What is Raji: An Ancient Epic?\nA: Raji: An Ancient Epic is an action-adventure video game set in ancient India, developed by Nodding Heads Games (based in Pune, India) and released in 2020. Players control Raji, a young girl chosen by the gods to rescue her younger brother Golu and stand against a demonic invasion led by Mahabalasura.",
+    "score": 0.1432,
+    "response_time": 0.8659,
+    "language": "English",
+    "feedback": null
+  },
+  {
+    "id": "chat_16_1795596741",
+    "timestamp": "2026-11-25T14:22:21.967610",
+    "question": "why we use logi game",
+    "answer": "Q: What weapons does Raji use in the game?\nA: Raji wields four divine weapons gifted by the gods: 1) The Trishul (trident) gifted by Goddess Durga, 2) The Sharanga Bow gifted by Lord Vishnu, 3) The Sudarshana Chakra (discus) with blade and mace modes, and 4) The Gadha / Vajra elemental powerups.",
+    "score": 0.1578,
+    "response_time": 0.7027,
+    "language": "English",
+    "feedback": null
+  },
+  {
+    "id": "chat_17_1795597010",
+    "timestamp": "2026-11-25T14:26:50.215301",
+    "question": "raji game kya h",
+    "answer": "Raji: An Ancient Epic — Complete Game Guide & Lore",
+    "score": 0.2249,
+    "response_time": 0.8227,
+    "language": "Hindi",
+    "feedback": null
+  },
+  {
+    "id": "chat_18_1795597025",
+    "timestamp": "2026-11-25T14:27:05.867810",
+    "question": "who is sanchi in raji game",
+    "answer": "Raji: An Ancient Epic — Complete Game Guide & Lore",
+    "score": 0.2249,
+    "response_time": 0.5665,
+    "language": "Hindi",
+    "feedback": null
+  },
+  {
+    "id": "chat_19_1795597252",
+    "timestamp": "2026-11-25T14:30:52.882024",
+    "question": "hii",
+    "answer": "Hello! How can I assist you with the game 'Raji: An Ancient Epic'? If you have questions about the story, characters, weapons, or gameplay, feel free to ask.",
+    "score": 0.0,
+    "response_time": 1.1786,
+    "language": "Hindi",
+    "feedback": null
+  },
+  {
+    "id": "chat_20_1795597268",
+    "timestamp": "2026-11-25T14:31:08.102707",
+    "question": "mujhe raji ke bare mein bataye",
+    "answer": "A: Raji is the main protagonist of the game, a young girl from a circus background. She is chosen by the gods Durga and Vishnu to save her brother Golu and stop the demon lord Mahabalasura from conquering the human world. Raji is brave, resourceful, and skilled in combat, using her elemental favors (Indra, Agni, and Shiva) to fight against the demon invasion. The game's story and characters are presented through a blend of Pahari miniature paintings, Tholu Bommalata (shadow puppetry), and voiceovers from Lord Vishnu and Goddess Durga, who observe Raji's journey.",
+    "score": 0.1537,
+    "response_time": 1.1312,
+    "language": "Hindi",
+    "feedback": null
+  },
+  {
+    "id": "chat_21_1795597287",
+    "timestamp": "2026-11-25T14:31:27.062967",
+    "question": "sanchi kon thi raji game mein",
+    "answer": "In the game Raji: An Ancient Epic, Sanchi is not a playable character. Raji is the main protagonist, and the story revolves around her journey to rescue her brother Golu and defeat the demon lord Mahabalasura. The game features characters like Raji, Durga, Vishnu, and Mahabalasura, but not Sanchi. Sanchi is likely a reference to a famous Stupa in Bihar, India, which is unrelated to the game's story. If you have questions about gameplay mechanics, issues, or need assistance, feel free to ask.",
+    "score": 0.1797,
+    "response_time": 1.5429,
+    "language": "Hindi",
+    "feedback": null
+  },
+  {
+    "id": "chat_22_1795598378",
+    "timestamp": "2026-11-25T14:49:38.869705",
+    "question": "what is Raju game about",
+    "answer": "\"Raju\" appears to be a typo for **Raji**.\n\n**Raji: An Ancient Epic** is an action-adventure game set in ancient India. The story follows **Raji**, a young circus performer who is chosen by the gods **Durga** and **Vishnu** to rescue her younger brother, **Golu**, from the demon lord **Mahabalasura**.\n\nKey elements of the game include:\n*   **Story:** A journey across forts, palaces, and mystical landscapes inspired by Rajasthani architecture and Pahari paintings.\n*   **Combat:** Raji uses four divine weapons: the **Trishul** (from Durga), the **Sharanga Bow** (from Vishnu), the **Sudarshana Chakra**, and elemental powers.\n*   **Gameplay:** It combines action combat with mandala-based puzzles.\n\nWould you like to know more about the weapons, characters, or how to play?",
+    "score": 0.1766,
+    "response_time": 1.9349,
+    "language": "English",
+    "feedback": "up"
   }
 ]

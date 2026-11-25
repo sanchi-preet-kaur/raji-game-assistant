@@ -6,3 +6,5 @@ python-docx>=1.1.0
 deep-translator>=1.11.4
 SpeechRecognition>=3.10.0
 gTTS>=2.5.0
+groq>=0.11.0
+python-dotenv>=1.0.1

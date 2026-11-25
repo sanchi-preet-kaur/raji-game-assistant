@@ -1,18 +1,21 @@
-# Python virtual environments
+# Environments & dependencies
 venv/
 .venv/
-
-# Python cache
 __pycache__/
 *.py[cod]
+*.egg-info/
 
-# Environment variables and secrets
+# Secrets & environment variables
 .env
+.env.*
+!.env.example
+
+# Streamlit & local runtime caches
 .streamlit/secrets.toml
+data/store/*.pkl
+*.log
 
-# IDE files
-.vscode/
-
-# OS files
+# OS / editor artifacts
 .DS_Store
 Thumbs.db
+.vscode/
