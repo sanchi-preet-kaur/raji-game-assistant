@@ -1,7 +1,7 @@
-# 🗡️ Raji — Game Assistant
+# 🗡️ Raji — AI Game & Support Assistant
 
 <p align="center">
-  A lightweight, offline-first game knowledge assistant for
+  An intelligent, multilingual game knowledge and player support assistant for
   <b>Raji: An Ancient Epic</b>.
 </p>
 
@@ -9,92 +9,112 @@
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python" />
   <img src="https://img.shields.io/badge/Framework-Streamlit-FF4B4B?logo=streamlit" />
   <img src="https://img.shields.io/badge/NLP-TF--IDF-orange" />
-  <img src="https://img.shields.io/badge/Approach-Retrieval--Based-success" />
-  <img src="https://img.shields.io/badge/API%20Key-Not%20Required-brightgreen" />
+  <img src="https://img.shields.io/badge/LLM-Groq-purple" />
+  <img src="https://img.shields.io/badge/Architecture-RAG-success" />
 </p>
 
 ---
 
 ## 📌 Overview
 
-**Raji — Game Assistant** is an interactive chatbot designed to help players explore the world, characters, weapons, powers, puzzles, and gameplay of *Raji: An Ancient Epic*.
+**Raji — AI Game & Support Assistant** is an interactive, multi-page chatbot and player support application developed for the action-adventure video game *Raji: An Ancient Epic* by Nodding Heads Games.
 
-Built using Python and Streamlit, the application uses Natural Language Processing (NLP) and information retrieval techniques to find relevant answers from a predefined knowledge base.
+The application helps players explore game lore, characters, weapons, powers, puzzles, and gameplay-related information through a conversational interface.
 
-Instead of relying on paid Large Language Model (LLM) APIs, it uses **TF-IDF vectorization and cosine similarity** to retrieve relevant information locally.
+Built using Python and Streamlit, the system combines local Natural Language Processing (NLP) and information retrieval techniques with Groq-powered Large Language Model (LLM) generation.
 
-## ✨ Features
+It uses **TF-IDF vectorization and cosine similarity** to retrieve relevant information from a curated knowledge base. The retrieved context is then used to generate domain-focused responses through the Groq API.
+
+An offline-friendly retrieval fallback helps maintain basic question-answering functionality when the external LLM service is unavailable.
+
+## ✨ Key Features
 
 | Feature | Description |
 |---|---|
-| 💬 Interactive Chatbot | Ask questions about Raji: An Ancient Epic |
-| 🔎 Smart Retrieval | TF-IDF and cosine similarity-based search |
+| 💬 AI Chat Assistant | Conversational answers to game-related questions |
+| 🧠 RAG Pipeline | Combines knowledge retrieval with Groq LLM generation |
+| 🔎 Semantic Knowledge Search | TF-IDF and cosine similarity-based retrieval |
 | 📚 Knowledge Management | Upload TXT, PDF, and DOCX documents |
-| 🔐 Role-Based Access | Guest and administrator access |
-| 🌐 Multilingual Support | English and Hindi fallback functionality |
+| 🔐 Role-Based Access | Guest/customer and administrator access |
+| 🌐 Multilingual Support | Translation and multilingual reply functionality |
 | 🎨 Theme Customization | Dark and light themes |
-| 📊 Analytics | Track queries and usage information |
-| 🎤 Voice Features | Optional speech functionality |
-| 🎫 Support System | Submit player support tickets |
+| 📊 Admin Analytics | Monitor queries, response performance, and usage |
+| 🎤 Voice Features | Optional speech input and text-to-speech functionality |
+| 🎫 Support System | Submit and manage player support tickets |
+| 📴 Local Fallback | Retrieval-based responses when Groq generation is unavailable |
 
 ## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
 | Python | Core programming language |
-| Streamlit | Web application interface |
-| Scikit-learn | Machine learning and retrieval |
+| Streamlit | Interactive web application and navigation |
+| Scikit-learn | NLP and information retrieval |
 | TF-IDF | Text vectorization |
-| Cosine Similarity | Document relevance scoring |
+| Cosine Similarity | Knowledge relevance scoring |
+| Groq API | LLM-powered response generation |
+| Deep Translator | Multilingual text translation |
 | PyPDF | PDF text extraction |
-| Python-docx | DOCX processing |
+| Python-docx | DOCX document processing |
 | JSON | Local data storage |
 | Pickle | Retrieval index serialization |
-| HTML & CSS | UI customization |
+| HTML & CSS | Interface customization |
+| SpeechRecognition | Optional voice input |
+| gTTS | Optional text-to-speech generation |
 
-## 🧠 How It Works
+## 🧠 System Architecture
 
-The application follows a retrieval-based question-answering workflow.
+The application follows a retrieval-augmented question-answering workflow.
 
-1. User enters a question.
+1. The user submits a game-related question.
 2. The system preprocesses the query.
 3. TF-IDF converts the query into a numerical representation.
-4. Cosine similarity compares it with stored knowledge chunks.
-5. The most relevant chunk is selected.
-6. A similarity threshold determines whether the result is reliable.
-7. The application displays the answer or a fallback response.
+4. Cosine similarity compares the query with indexed knowledge chunks.
+5. The most relevant chunks are retrieved from the knowledge base.
+6. A similarity threshold helps determine whether relevant context is available.
+7. Retrieved context is passed to the Groq LLM with game-specific instructions.
+8. The generated response is displayed to the user.
+9. If Groq is unavailable or no suitable result is found, the application uses its configured fallback response.
 
-### System Architecture
+### Architecture Diagram
 
 ```text
-             USER
-               |
-               v
-       STREAMLIT INTERFACE
-               |
-               v
-       QUERY PROCESSING
-               |
-               v
-        TF-IDF VECTORIZER
-               |
-               v
-       COSINE SIMILARITY
-               |
-               v
-       KNOWLEDGE RETRIEVAL
-               |
-          +----+----+
-          |         |
-       Relevant   No Match
-          |         |
-          v         v
-       ANSWER    FALLBACK
-          |         |
-          +----+----+
-               |
-               v
-          USER RESPONSE
+                 USER
+                   |
+                   v
+          STREAMLIT INTERFACE
+                   |
+                   v
+            QUERY PROCESSING
+                   |
+                   v
+            TF-IDF VECTORIZER
+                   |
+                   v
+           COSINE SIMILARITY
+                   |
+                   v
+          KNOWLEDGE RETRIEVAL
+                   |
+                   v
+          RELEVANCE EVALUATION
+                   |
+             +-----+-----+
+             |           |
+          Relevant    No Match
+             |           |
+             v           v
+       RETRIEVED       FALLBACK
+        CONTEXT       RESPONSE
+             |
+             v
+         GROQ LLM API
+             |
+             v
+      GENERATED RESPONSE
+             |
+             v
+          USER OUTPUT
 ```
 
 ## 📂 Project Structure
@@ -138,6 +158,7 @@ raji-game-assistant/
 - Python 3.10 or later
 - Git
 - VS Code (recommended)
+- Groq API key for LLM-powered responses
 
 ### 1. Clone the repository
 
@@ -157,12 +178,24 @@ cd raji-game-assistant
 python -m venv venv
 ```
 
-### 4. Activate the environment
+### 4. Activate the virtual environment
 
-**Windows:**
+**Windows PowerShell:**
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+**Windows Command Prompt:**
+
+```cmd
+venv\Scripts\activate.bat
+```
+
+**Mac/Linux:**
 
 ```bash
-venv\Scripts\activate
+source venv/bin/activate
 ```
 
 ### 5. Install dependencies
@@ -171,13 +204,29 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 6. Run the application
+### 6. Configure the Groq API key
+
+Create a `.streamlit` folder in the project directory if it does not already exist.
+
+Inside it, create a file named `secrets.toml`:
+
+```toml
+GROQ_API_KEY = "your_groq_api_key_here"
+```
+
+Replace the placeholder with your own Groq API key.
+
+**Security note:** Never upload your API key or `secrets.toml` file to GitHub. Keep it excluded through `.gitignore`.
+
+If your application uses a different configuration method, follow the corresponding setup in your source code.
+
+### 7. Run the application
 
 ```bash
 streamlit run Home.py
 ```
 
-### 7. Open in browser
+### 8. Open in your browser
 
 ```text
 http://localhost:8501
@@ -185,42 +234,64 @@ http://localhost:8501
 
 ## 📸 Application Screenshots
 
-Add screenshots of your actual application here.
+Add screenshots of your actual running application to showcase its interface and functionality.
 
 | Home Page | Chat Interface |
 |---|---|
-| Add home screenshot | Add chat screenshot |
+| Add home page screenshot | Add chat screenshot |
 
-| Semantic Search | Analytics |
+| Semantic Search | Analytics Dashboard |
 |---|---|
-| Add search screenshot | Add analytics screenshot |
+| Add semantic search screenshot | Add analytics screenshot |
+
+| Knowledge Base | Support Page |
+|---|---|
+| Add knowledge base screenshot | Add support screenshot |
+
+## 🔍 Core Application Modules
+
+| Module | Responsibility |
+|---|---|
+| `Home.py` | Main entry point and application navigation |
+| `core/rag.py` | TF-IDF indexing, retrieval, Groq integration, and fallback handling |
+| `core/auth.py` | User authentication and role management |
+| `core/sidebar.py` | Shared navigation and application settings |
+| `core/storage.py` | Local data persistence |
+| `core/theme.py` | Dark and light theme customization |
+| `core/translate.py` | Translation and multilingual functionality |
+| `core/voice.py` | Optional speech and audio functionality |
 
 ## 🎯 Project Objectives
 
-- Build a dedicated gaming knowledge assistant.
-- Implement locally executable information retrieval.
-- Apply NLP techniques to game-related questions.
+- Develop an intelligent game-specific knowledge assistant.
+- Apply NLP and information retrieval techniques to gaming-related questions.
+- Integrate a Large Language Model for contextual response generation.
+- Ground generated responses in a curated knowledge base.
 - Support administrator-managed knowledge documents.
-- Provide multilingual fallback functionality.
-- Develop a modular and accessible web interface.
+- Provide multilingual and voice accessibility features.
+- Build an interactive dashboard for monitoring application usage.
+- Implement an offline-friendly fallback mechanism.
 
 ## ⚠️ Limitations
 
-- Answer quality depends on the available knowledge base.
-- TF-IDF may not understand complex semantic relationships.
-- The system does not currently generate answers using an LLM.
-- Some optional voice and translation features may require internet access.
-- Retrieval accuracy depends on the similarity threshold.
+- Response quality depends on the quality and coverage of the knowledge base.
+- TF-IDF is based on lexical similarity and may not understand every semantic relationship.
+- Groq-powered generation requires an internet connection and a valid API key.
+- Local fallback responses may be less conversational than LLM-generated responses.
+- Translation and some voice features may require internet access.
+- Retrieval performance depends on document quality, preprocessing, and similarity thresholds.
+- Analytics are based on the application's locally stored usage data.
 
 ## 🚀 Future Enhancements
 
 - Integration with local LLMs using Ollama.
-- Dense vector embeddings.
+- Dense vector embeddings for improved semantic retrieval.
 - Hybrid sparse and dense retrieval.
-- Hinglish query normalization.
-- Expanded Hindi knowledge base.
-- Improved multilingual question answering.
-- Advanced retrieval evaluation and analytics.
+- Improved Hinglish query normalization.
+- Expanded multilingual knowledge base.
+- Advanced retrieval evaluation and benchmarking.
+- Improved conversational memory.
+- Deployment and scalability improvements.
 
 ## 👩‍💻 Developer
 
@@ -238,7 +309,7 @@ Developed for educational, academic, and portfolio purposes.
 ---
 
 <p align="center">
-  <b>Built with ❤️ using Python and Streamlit</b>
+  <b>Built with ❤️ using Python, Streamlit, and Groq</b>
 </p>
 
 <p align="center">
